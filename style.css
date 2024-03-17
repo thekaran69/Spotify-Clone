@@ -18,7 +18,11 @@ body {
     border-radius: 1rem; /*16px */
     margin-right: 0.5rem;
 }
-
+@media (max-width: 1000px){
+    .sidebar{
+        width: 10%;;
+    }
+}
 .main-content{
     background-color: #121212;
     flex: 1;
@@ -26,7 +30,11 @@ body {
     overflow: auto;
     padding: 0 1.5rem 0 1.5rem;
 }
-
+@media (max-width: 800px){
+    .main-content{
+        width: 90%;
+    }
+}
 .music-player{
     background-color: black;
     position: fixed;
@@ -68,7 +76,16 @@ a{
     font-size: 1rem;
     margin-left: 1rem;
 }
-
+/* @media (max-width: 800px){
+    .nav{
+        width: 10%;
+    }
+} */
+@media (max-width: 800px){
+    .nav-option a{
+        display: none;
+    }
+}
 .library{
     background-color: #121212;
     border-radius: 1rem;
@@ -137,6 +154,22 @@ a{
     background: black;
     color: white;
 }
+@media (max-width: 800px){
+    .lib-box{
+        display: none;
+    }
+}
+@media (max-width: 800px){
+    .options i{
+        display: none;
+    }
+}
+/* @media (max-width: 800px){
+    .library{
+        width: 10%;
+    }
+} */
+
 
 .sticky-nav{
     position: sticky;
@@ -219,15 +252,61 @@ a{
 
 .album{
     width: 25%;
+    margin: 1rem;
+    display: flex;
+    
+
 
 }
+.album img{
+    width: 17%;
+    height: 100%;
+    border-radius:0.75rem;
+}
 
+.album-title{
+    margin-left: 1rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+.album-icon{
+    margin-top: 1.25rem;
+    margin-left: 3rem;
+}
+
+.album-expand{
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+}
+
+@media (max-width: 800px){
+    .album{
+        display: none;
+    }
+}
 .player{
     width: 50%;
 }
 
 .controls{
     width: 25%;
+    justify-content: space-between;
+}
+.controls i{
+    margin-left: 1rem;
+    height: 1.5rem;
+    align-items: center;
+}
+.controls .progress-bar{
+    width: 30%;
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+@media (max-width: 800px){
+    .controls{
+        display: none;
+    }
 }
 
 .player-controls-icon{
@@ -276,4 +355,9 @@ a{
     margin-top: -6px;
 
 
+}
+@media (max-width: 800px){
+    .player{
+        width: 100%;
+    }
 }
